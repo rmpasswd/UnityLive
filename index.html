@@ -3,9 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | WebGL Build Testing</title>
+    <title>Unity WebGL Player | WebGL Test 2D</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="https://unpkg.com/mqtt@4.3.7/dist/mqtt.min.js" type="text/javascript">
+    let mqtt = require('mqtt');
+    </script> 
+
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -20,7 +24,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">WebGL Build Testing</div>
+        <div id="unity-build-title">WebGL Test 2D</div>
       </div>
     </div>
     <script>
@@ -57,15 +61,15 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/UnityLive Github.loader.js";
+      var loaderUrl = buildUrl + "/WebGL Builds.loader.js";
       var config = {
-        dataUrl: buildUrl + "/UnityLive Github.data.gz",
-        frameworkUrl: buildUrl + "/UnityLive Github.framework.js.gz",
-        codeUrl: buildUrl + "/UnityLive Github.wasm.gz",
+        dataUrl: buildUrl + "/WebGL Builds.data.br",
+        frameworkUrl: buildUrl + "/WebGL Builds.framework.js.br",
+        codeUrl: buildUrl + "/WebGL Builds.wasm.br",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "WebGL Build Testing",
-        productVersion: "0.1",
+        productName: "WebGL Test 2D",
+        productVersion: "1.0",
         showBanner: unityShowBanner,
       };
 
